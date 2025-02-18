@@ -1,6 +1,15 @@
 /* eslint-disable react/react-in-jsx-scope */
 // 1. import core/ini component
-import {Text, View, StyleSheet, Image, ScrollView} from 'react-native';
+import React from 'react';
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 
 // 2. buat component
 // componenet adalah function yg return jsx
@@ -13,25 +22,30 @@ const App = () => {
         <Text style={styles.title}>Basic React Native</Text>
       </View>
 
-      <View style={styles1.container1}>
+      {/* <View style={styles1.container1}>
         <Text style={styles1.title1}>Core Components in React Native</Text>
-      </View>
+      </View> */}
 
+      <TextInput style={styles.input} placeholder="Enter your email" />
+      <TextInput style={styles.input} placeholder="Enter your password" />
+      <TouchableOpacity style={styles.button} activeOpacity={0.5}>
+        <Text style={styles.buttonText}>Submit</Text>
+      </TouchableOpacity>
       <View>
-        <Text style={styles2.subTitle}>Image from local directory</Text>
-        <Image style={styles2.Img1} source={require('./assets/photo1.jpg')} />
+        <Text style={styles.subTitle}>Image from local directory</Text>
+        <Image style={styles.Img1} source={require('./assets/logofik.png')} />
 
-        <Text style={styles2.subTitle}>Image from url</Text>
+        <Text style={styles.subTitle}>Image from url</Text>
         <Image
-          style={styles2.Img1}
+          style={styles.Img1}
           source={{
             uri: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-1024.png',
           }}
         />
 
-        <Text style={styles2.subTitle}>Image from Based64</Text>
+        <Text style={styles.subTitle}>Image from Based64</Text>
         <Image
-          style={styles2.Img1}
+          style={styles.Img1}
           source={{
             uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
           }}
@@ -61,25 +75,6 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     textAlign: 'center',
   },
-});
-
-const styles1 = StyleSheet.create({
-  container1: {
-    backgroundColor: 'yellow',
-    borderColor: 'red', //warna border
-    padding: 10,
-    margin: 15,
-    borderWidth: 5, //jarak margin dan pading
-  },
-  title1: {
-    color: '#000', //color font
-    fontWeight: '500', //bold
-    textAlign: 'center',
-    fontSize: 20,
-  },
-});
-
-const styles2 = StyleSheet.create({
   subTitle: {
     fontSize: 20,
     textAlign: 'center',
@@ -88,5 +83,41 @@ const styles2 = StyleSheet.create({
     width: 300,
     height: 300,
     justifyContent: 'center',
+    marginLeft: 50,
+  },
+  input: {
+    borderWidth: 2,
+    borderColor: 'black',
+    margin: 20,
+    padding: 20,
+    fontSize: 15,
+    borderRadius: 5,
+  },
+  button: {
+    backgroundColor: 'blue',
+    margin: 20,
+    padding: 20,
+    borderRadius: 15,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 20,
+    textAlign: 'center',
   },
 });
+
+// const styles1 = StyleSheet.create({
+//   container1: {
+//     backgroundColor: 'yellow',
+//     borderColor: 'red', //warna border
+//     padding: 10,
+//     margin: 15,
+//     borderWidth: 5, //jarak margin dan pading
+//   },
+//   title1: {
+//     color: '#000', //color font
+//     fontWeight: '500', //bold
+//     textAlign: 'center',
+//     fontSize: 20,
+//   },
+// });
