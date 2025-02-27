@@ -105,19 +105,3 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
-
-// const styles1 = StyleSheet.create({
-//   container1: {
-//     backgroundColor: 'yellow',
-//     borderColor: 'red', //warna border
-//     padding: 10,
-//     margin: 15,
-//     borderWidth: 5, //jarak margin dan pading
-//   },
-//   title1: {
-//     color: '#000', //color font
-//     fontWeight: '500', //bold
-//     textAlign: 'center',
-//     fontSize: 20,
-//   },
-// });
