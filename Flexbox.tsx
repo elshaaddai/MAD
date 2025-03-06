@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 
 // rnfes = cara cepat
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 
 const Flexbox = () => {

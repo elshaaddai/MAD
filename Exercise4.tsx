@@ -76,15 +76,4 @@ const styles = StyleSheet.create({
     height: 400,
     resizeMode: 'contain',
   },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'black',
-    marginTop: 10,
-  },
-  subText: {
-    fontSize: 16,
-    fontStyle: 'italic',
-    color: 'gray',
-  },
 });
