@@ -2,11 +2,15 @@
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-const Button = ({label, color = 'blue'}) => {
+// onPress membuat interaksi di button
+const Button = ({label, color = 'blue', onPress}) => {
   return (
     <View>
       <View>
-        <TouchableOpacity style={styles.button(color)} activeOpacity={0.5}>
+        <TouchableOpacity
+          style={styles.button(color)}
+          activeOpacity={0.5}
+          onPress={onPress}>
           <Text style={styles.buttonText}>{label}</Text>
         </TouchableOpacity>
       </View>
