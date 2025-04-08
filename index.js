@@ -14,4 +14,4 @@ import Exercise6 from './Exercise6';
 import RestAPI from './RestAPI';
 import Exercise7 from './Exercise7';
 
-AppRegistry.registerComponent(appName, () => Exercise7);
+AppRegistry.registerComponent(appName, () => App);
