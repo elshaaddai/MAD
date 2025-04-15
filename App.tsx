@@ -1,131 +1,119 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+/* eslint-disable prettier/prettier */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import SplashScreen from './src/pages/SplashScreen';
+import SignIn from './src/pages/SignIn';
+import SignUp from './src/pages/SignUp';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  /*
-   * To keep the template simple and small we're adding padding to prevent view
-   * from rendering under the System UI.
-   * For bigger apps the recommendation is to use `react-native-safe-area-context`:
-   * https://github.com/AppAndFlow/react-native-safe-area-context
-   *
-   * You can read more about it here:
-   * https://github.com/react-native-community/discussions-and-proposals/discussions/827
-   */
-  const safePadding = '5%';
-
-  return (
-    <View style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        style={backgroundStyle}>
-        <View style={{paddingRight: safePadding}}>
-          <Header/>
-        </View>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-            paddingHorizontal: safePadding,
-            paddingBottom: safePadding,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+const App = () => {
+  return <SignUp />;
+};
 
 export default App;
+
+// // 1. import core/ini component
+// import React from 'react';
+// import {
+//   Text,
+//   View,
+//   StyleSheet,
+//   Image,
+//   ScrollView,
+//   TextInput,
+//   TouchableOpacity,
+// } from 'react-native';
+
+// // 2. buat component
+// // componenet adalah function yg return jsx
+// const App = () => {
+//   // jsx
+//   return (
+//     //showsverticalscrollindicatior untuk menghapus scroll yang ada di sebelah kanan
+//     <ScrollView showsVerticalScrollIndicator={false}>
+//       <View style={styles.container}>
+//         <Text style={styles.title}>Basic React Native</Text>
+//       </View>
+
+//       {/* <View style={styles1.container1}>
+//         <Text style={styles1.title1}>Core Components in React Native</Text>
+//       </View> */}
+
+//       <TextInput style={styles.input} placeholder="Enter your email" />
+//       <TextInput style={styles.input} placeholder="Enter your password" />
+//       <TouchableOpacity style={styles.button} activeOpacity={0.5}>
+//         <Text style={styles.buttonText}>Submit</Text>
+//       </TouchableOpacity>
+//       <View>
+//         <Text style={styles.subTitle}>Image from local directory</Text>
+//         <Image style={styles.Img1} source={require('./assets/logofik.png')} />
+
+//         <Text style={styles.subTitle}>Image from url</Text>
+//         <Image
+//           style={styles.Img1}
+//           source={{
+//             uri: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-1024.png',
+//           }}
+//         />
+
+//         <Text style={styles.subTitle}>Image from Based64</Text>
+//         <Image
+//           style={styles.Img1}
+//           source={{
+//             uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
+//           }}
+//         />
+//       </View>
+//     </ScrollView>
+//   );
+// };
+
+// // 3. export component
+// export default App;
+
+// // 4. styling
+// const styles = StyleSheet.create({
+//   container: {
+//     backgroundColor: 'red',
+//     borderColor: 'black',
+//     borderWidth: 3,
+//     padding: 20,
+//     margin: 10,
+//     borderRadius: 5,
+//     marginBottom: 20,
+//   },
+//   title: {
+//     fontSize: 30,
+//     fontWeight: '800',
+//     color: '#FFFFFF',
+//     textAlign: 'center',
+//   },
+//   subTitle: {
+//     fontSize: 20,
+//     textAlign: 'center',
+//   },
+//   Img1: {
+//     width: 300,
+//     height: 300,
+//     justifyContent: 'center',
+//     marginLeft: 50,
+//   },
+//   input: {
+//     borderWidth: 2,
+//     borderColor: 'black',
+//     margin: 20,
+//     padding: 20,
+//     fontSize: 15,
+//     borderRadius: 5,
+//   },
+//   button: {
+//     backgroundColor: 'blue',
+//     margin: 20,
+//     padding: 20,
+//     borderRadius: 15,
+//   },
+//   buttonText: {
+//     color: 'white',
+//     fontSize: 20,
+//     textAlign: 'center',
+//   },
+// });
