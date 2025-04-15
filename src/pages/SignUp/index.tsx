@@ -6,11 +6,13 @@ import Gap from '../../components/atom/Gap';
 import AddPhoto from '../../components/moleculs/AddPhoto';
 import TextInput from '../../components/moleculs/TextInput';
 import Button from '../../components/atom/Button';
+import {BackBtn} from '../../assets';
 
 const SignUp = () => {
   return (
     <View style={styles.pageContainer}>
       <View style={styles.header}>
+        <BackBtn style={styles.BackBtn} />
         <Header title="Sign Up" />
       </View>
       <View style={styles.contentContainer}>
@@ -45,7 +47,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   header: {
+    backgroundColor: '#FFFFFF',
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  BackBtn: {
+    marginLeft: 24,
+    width: 24,
+    height: 24,
   },
 });
