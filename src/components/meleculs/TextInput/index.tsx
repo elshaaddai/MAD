@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet, Text, View, TextInput as Input} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 
 const TextInput = ({label, placeholder}) => {
   return (
@@ -18,8 +18,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Regular',
     fontSize: 16,
     marginBottom: 6,
+    color: '#020202',
   },
   input: {
+    height: 40,
     borderWidth: 1,
     borderColor: '#020202',
     borderRadius: 8,

@@ -17,9 +17,12 @@ const styles = StyleSheet.create({
     paddingLeft: 24,
     paddingVertical: 38,
     backgroundColor: '#FFFFFF',
+    paddingTop: 37,
+    paddingBottom: 38,
   },
   title: {
-    fontFamily: 'Poppins-Medium',
+    fontFamily: 'Poppins',
     fontSize: 22,
+    color: '#020202',
   },
 });
